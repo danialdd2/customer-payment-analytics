@@ -1,99 +1,56 @@
-# Customer Payment Analytics
+Customer Payment Analytics
+About
 
-## Overview
+This project reads customer payment data from a PostgreSQL database and analyzes it using Python.
 
-This project analyzes customer payment data from a PostgreSQL database using Python, SQLAlchemy, and Pandas.
+It uses Pandas to calculate some basic statistics and SQLAlchemy ORM to save the results into a new table.
 
-The main goal was to practice working with databases, writing SQL queries, processing data with Pandas, and storing the results back into a new table.
+I made this project to practice working with databases, Pandas, and SQLAlchemy.
 
-This project simulates a simple real-world data analytics workflow.
+Tools
 
----
+Python
 
-## Tools and Technologies
+PostgreSQL
 
-* Python
-* SQLAlchemy
-* Pandas
-* PostgreSQL
-* Git & GitHub
+SQLAlchemy
 
----
+Pandas
 
-## Project Structure
+Files
+database.py   -> database connection
+models.py     -> table model
+queries.py    -> SQL query
+analysis.py   -> data analysis
+main.py       -> main file
 
-```
-customer-payment-analytics/
+What it does
 
-database.py     -> database connection
-models.py      -> table definitions
-queries.py     -> SQL query used to extract data
-analysis.py    -> data processing and analytics
-main.py        -> runs the full pipeline
-README.md
-```
+For each customer, it calculates:
 
----
+total payment
 
-## What the project does
+number of payments
 
-• Connects to a PostgreSQL database
-• Extracts customer and payment data using SQL
-• Processes the data using Pandas
-• Calculates:
+average payment
 
-* total payment per customer
-* number of payments
-* average payment
-* customer level based on total spending
+customer level (VIP, Regular, Low)
 
-• Saves the results into a new table called:
+Then it saves the result into a table called:
 
-```
 customer_analytics
-```
 
----
+Run
 
-## Example output
+Install packages:
 
-Each customer gets analyzed and classified:
-
-* VIP
-* Regular
-* Low
-
-based on their total payments.
-
----
-
-## Why I built this project
-
-I created this project to practice:
-
-* working with real databases
-* combining SQLAlchemy and Pandas
-* building a simple data analysis pipeline
-* preparing for data analyst / applied AI roles
-
----
-
-## How to run
-
-Install requirements:
-
-```
 pip install sqlalchemy pandas psycopg2
-```
 
-Run the project:
 
-```
+Run:
+
 python main.py
-```
 
----
-
-## Author
+Author
 
 Danial

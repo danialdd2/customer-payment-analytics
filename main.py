@@ -8,10 +8,10 @@ result_df = run_analysis()
 
 
 result_df.to_sql(
-    "customer_analytics",   
+    "customer_analytics",
     engine,
-    if_exists="replace",    
+    if_exists="replace",
     index=False
 )
 
-print("DONE. Tavle customer_analytics created.")
+print("done. Tavle customer_analytics created.")

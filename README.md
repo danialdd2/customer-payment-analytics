@@ -1,4 +1,5 @@
 Customer Payment Analytics
+
 About
 
 This project reads customer payment data from a PostgreSQL database and analyzes it using Python.
